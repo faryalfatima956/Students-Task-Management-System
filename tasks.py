@@ -31,3 +31,11 @@ def mark_complete(task_id):
 
 # def delete_task(task_id):
 #     pass #Member 3
+def delete_task(task_id):
+    for task in tasks:
+        if task["id"] == task_id:
+            tasks.remove(task)
+            print(f"Task {task_id} deleted successfully.")
+            return
+
+    print(f"Task with ID {task_id} does not exist.")
